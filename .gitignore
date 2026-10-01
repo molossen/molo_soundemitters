@@ -1,0 +1,9 @@
+# per-server data written by the editor
+data/emitters.json
+data/audio_export.json
+data/sound_check.json
+data/interior_names.json
+exports/*.json
+audio/*.rel
+audio/*.xml
+stream/*.ymt

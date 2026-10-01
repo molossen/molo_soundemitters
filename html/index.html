@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Molo Sound Emitters</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="toasts"></div>
+
+<!-- Aiming HUD (no mouse) -->
+<div id="hud" class="hidden">
+  <div class="hud-card">
+    <div class="hud-top">
+      <span class="brand">SOUND EMITTERS</span>
+      <span class="hud-group" id="hudGroup"></span>
+    </div>
+    <div class="hud-int" id="hudInt"></div>
+    <div class="hud-sel" id="hudSel"><span class="dot"></span><span class="txt">Nothing selected — TAB to open the menu</span></div>
+    <div class="hud-stats">
+      <div><small>Range</small><b id="hudRange">15 m</b></div>
+      <div><small>Height</small><b id="hudHeight">+0.0 m</b></div>
+      <div id="hudHeadBox"><small>Rotation</small><b id="hudHeading">0°</b></div>
+    </div>
+    <div class="hud-state" id="hudState"></div>
+    <div class="keys">
+      <span><kbd>E</kbd>Place</span>
+      <span><kbd>Q</kbd>Preview</span>
+      <span><kbd>Wheel</kbd>Range</span>
+      <span><kbd>⇧+Wheel</kbd>Height</span>
+      <span><kbd>← →</kbd>Rotate</span>
+      <span><kbd>G</kbd>Move</span>
+      <span><kbd>H</kbd>Edit</span>
+      <span><kbd>X</kbd>Delete</span>
+      <span><kbd>TAB</kbd>Menu</span>
+      <span><kbd>⌫</kbd>Exit</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main menu (mouse) -->
+<div id="panel" class="hidden">
+  <header>
+    <div class="title">
+      <span class="brand">Molo Sound Emitters</span>
+      <small id="hdrInt">—</small>
+    </div>
+    <div class="hdr-acts">
+      <button class="sm" id="btnAim" title="Back to aiming (Esc)">Aim ↩</button>
+      <button class="sm danger" id="btnQuit" title="Close the editor">Exit</button>
+    </div>
+  </header>
+
+  <nav id="tabs">
+    <button data-tab="interior">Interior</button>
+    <button data-tab="mlo">MLO</button>
+    <button data-tab="doors">Doors</button>
+    <button data-tab="occl">Occlusion</button>
+    <button data-tab="sounds">Sounds</button>
+    <button data-tab="ambient">Emitters</button>
+    <button data-tab="radios">Radios</button>
+    <button data-tab="objects">Objects</button>
+    <button data-tab="natives">Mute</button>
+    <button data-tab="placed">Placed</button>
+    <button data-tab="export">Export</button>
+  </nav>
+
+  <section id="view"></section>
+  <section id="detail" class="hidden"></section>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
